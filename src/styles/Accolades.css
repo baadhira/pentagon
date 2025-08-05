@@ -1,0 +1,129 @@
+.accolades-container {
+    background-color: #1A1C2B;
+    padding: 30px 0;
+  }
+  
+  .accolades-content {
+    width: 88%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  @media (min-width: 768px) {
+    .accolades-content {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+  }
+  
+  .accolade-item {
+    max-width: 240px;
+    flex: 0 0 100%;
+    padding: 40px 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+  }
+  
+  @media (min-width: 768px) {
+    .accolade-item {
+      flex: 0 0 27%;
+      padding: 0 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .accolade-item {
+      max-width: 340px;
+    }
+  }
+  
+  .accolade-item:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .accolade-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  @media (min-width: 768px) {
+    .accolade-details {
+      align-items: flex-start;
+    }
+  }
+  
+  .accolade-image {
+    margin-bottom: 15px;
+    max-width: 156px;
+    max-height: 25px;
+  }
+  
+  .accolade-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .accolade-description {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: left;
+    word-break: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+  }
+  
+  .divider-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+  }
+  
+  .divider {
+    width: 107px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .accolade-divider {
+    /* border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 1.5rem 0;
+    width: 100%; */
+    color:#484955;
+    background-color:#484955;
+    border : 1px solid #484955;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .accolade-divider {
+      transform: none;
+      width: 25%;
+      margin: 1.5rem auto;
+    }
+  }
+  @media (max-width: 768px) {
+    
+    .divider-container {
+      padding: 0;
+      height: 100%;
+      align-items: center;
+    }
+    
+    .divider {
+      width: 1px;
+      height: 100%;
+      min-height: 200px;  
+    }
+  }
