@@ -105,24 +105,67 @@ const KioskTabs = () => {
                   <div
                     className="tab-highlight"
                     style={{ "--active-index": activeIndex }}
-                  >
-                    {tabKeys.map((tab) => (
-                      <li
-                        key={tab}
-                        className="tabItem"
-                        onClick={() => setSelectedTab(tab)}
+                  />
+                  {tabKeys.map((tab) => (
+                    <li
+                      key={tab}
+                      className="tabItem"
+                      onClick={() => setSelectedTab(tab)}
+                    >
+                      <p
+                        className={`tab-text ${
+                          selectedTab === tab ? "active" : ""
+                        }`}
                       >
-                        <p
-                          className={`tab-text ${
-                            selectedTab === tab ? "active" : ""
-                          }`}
-                        >
-                          {tab}
-                        </p>
-                      </li>
-                    ))}
-                  </div>
+                        {tab}
+                      </p>
+                    </li>
+                  ))}
                 </ul>
+              </div>
+            </div>
+
+            <div className="content-section">
+              <div key={key} className={`animated-content ${slideDirection}`}>
+                <div className="contentWrapper">
+                  <div className="text-content">
+                    <h3 className="content-title">
+                      {tabsData[selectedTab].title}
+                    </h3>
+                    <ul className="features-list">
+                      {tabsData[selectedTab].features.map((feature, index) => (
+                        <li key={index} className="feature-item">
+                          <span className="feature-icon">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="14.393"
+                              height="10.111"
+                            >
+                              <path
+                                fill="none"
+                                stroke="#60c458"
+                                strokeWidth="2"
+                                d="M.697 4.107 5.45 8.718l8.247-8"
+                                data-name="tick - icon"
+                              />
+                            </svg>
+                          </span>
+                          <p className="feature-text">{feature}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="image-container">
+                    <div className="imageWrapper">
+                      <img
+                        src={tabsData[selectedTab].image}
+                        style={{ width: "100%", height: "auto" }}
+                        alt={selectedTab}
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

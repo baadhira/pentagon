@@ -1,0 +1,49 @@
+.fig {
+    width: 150px;
+    height: 80px;
+  }
+  .image-style {
+    width: 150px;
+    height: 80px;
+  }
+  .containerLoop {
+    position: relative;
+    margin: 0px 50px 0px 50px;
+  }
+  
+  .containerLoop::before,
+  .containerLoop::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 70px;
+    height: 100%;
+    background: linear-gradient(to right, #f7f7f7, #f7f7f7, transparent);
+    z-index: 1;
+    pointer-events: none;
+  }
+  .containerLoop {
+    background-color: #f7f7f7;
+  }
+  .containerLoop::before {
+    left: 0;
+  }
+  
+  .containerLoop::after {
+    right: 0;
+    transform: rotateY(180deg);
+  }
+  
+  @media (min-width: 640px) {
+    .containerLoop::before,
+    .containerLoop::after {
+      width: 100px;
+    }
+  }
+  .slick-prev:before {
+    content: "";
+  }
+  .slick-next:before {
+    content: "";
+  }
+  

@@ -93,8 +93,7 @@ const KioskFeatures = () => {
       {features.map((feature) => (
         <div key={feature.id} className="feature-section">
           <div 
-        //   className="feature-header"
-                className={`feature-header ${activeSection === feature.id ? 'active' : ''}`}
+            className={`feature-header ${activeSection === feature.id ? 'active' : ''}`}
            onClick={() => toggleSection(feature.id)}>
             <div className="feature-header-content">
               <span className="feature-title">{feature.title}</span>

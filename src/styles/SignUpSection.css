@@ -1,0 +1,179 @@
+.signup-section {
+    background-color: #020a19;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+  }
+  
+  @media (min-width: 768px) {
+    .signup-section {
+      height: 330px;
+      padding: 0;
+    }
+  }
+  
+  .signup-container {
+    width: 88%;
+    margin: 0 auto;
+    max-width: 1300px;
+  }
+  
+  .signup-header {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .signup-header h3 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 38px;
+    margin-bottom: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    .signup-header h3 {
+      font-size: 42px;
+      line-height: 1.3;
+    }
+  }
+  
+  .signup-form-wrapper {
+    max-width: 580px;
+    margin: 0 auto;
+  }
+  
+  .signup-form .form-row {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+  @media (max-width: 768px) {
+    .form-row {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px;
+    }
+    .submit-button {
+      width: 70% !important;
+      height: 53px;
+      border-radius: 3px;
+    }
+    .email-input {
+      width: 70% !important;
+      height: 53px;
+      border-radius: 3px;
+    }
+    .email-input:focus-visible {
+      outline: none;
+      border: none;
+    }
+    .email-input {
+      padding: 0px !important;
+      font-size: 18px;
+      line-height: 24px;
+      border: none;
+      box-shadow: none;
+    }
+  }
+  @media (min-width: 768px) {
+    .signup-form .form-row {
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+  
+  .email-input,
+  .submit-button {
+    width: 100%;
+    height: 53px;
+    border-radius: 3px;
+  }
+  
+  .email-input {
+    padding: 0 10px;
+    font-size: 18px;
+    line-height: 24px;
+    border: none;
+    box-shadow: none;
+  }
+  
+  .email-input::placeholder {
+    color: #c6c6c6;
+  }
+  
+  .submit-button {
+    background-color: #dd0735;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 17px;
+    line-height: 24px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #bb022a;
+  }
+  
+  @media (min-width: 768px) {
+    .email-input,
+    .submit-button {
+      width: auto;
+      flex: 1;
+    }
+  
+    .email-input {
+      max-width: 325px;
+    }
+  
+    .submit-button {
+      max-width: 195px;
+    }
+  }
+  
+  .signup-footer {
+    padding-top: 10px;
+    text-align: center;
+  }
+  
+  .footer-text {
+    color: #556575;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 500;
+    margin: 0;
+    padding-top: 10px;
+  }
+  
+  .demo-link {
+    color: #dd0735;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 500;
+    white-space: nowrap;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    padding: 0 20px 0 5px;
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .demo-link::after {
+    content: "";
+    width: 6px;
+    height: 10px;
+    position: absolute;
+    right: 5px;
+    top: 9px;
+    background-image: url("../assets/images/arrow-right.svg");
+    background-repeat: no-repeat;
+  }
+  
